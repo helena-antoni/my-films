@@ -1,0 +1,155 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+:root{
+    --gradient: linear-gradient(
+        90deg, #C91842 0%,
+        #5CC2E2 100%); 
+    --bg: url(./assets/bg.png) 
+}
+
+
+
+ul *{
+    list-style: none;
+}
+
+body *{
+    font-family: 'Montserrat', 'Sans-serif';
+}
+
+body{
+    background-image: var(--bg);
+    background-position: top center;  
+    background-repeat: no-repeat;     
+    background-color: #121214;      
+    background-size: cover; 
+}
+
+
+header div{
+    width: 120px;
+    margin: 32px auto; 
+    border-radius: 50%;
+    display: flex;
+    background-image: var(--gradient); 
+    padding: 4px;
+}
+
+header div:hover{
+    transform: scale(1.1);
+}
+ 
+
+header div img{
+    border-radius: 50%; 
+    width: 100%;  
+}
+
+
+main{
+    max-width:520px;   
+    width:85%;
+    margin: auto; 
+    display: grid;
+    gap: 24px; 
+    flex-wrap: wrap; 
+    margin: 32px auto; 
+}
+
+section{
+    color:white;  
+    background-image: var(--gradient);  
+    padding-top: 4px;
+    border-radius: 8px;
+    
+}
+
+section div{  
+    padding: 32px; 
+    padding-top: 24px;
+    background-color: #262629;
+    border-radius: 8px;  
+    
+}
+
+ 
+section ul li:hover{
+    transform: scale(1.1);
+    
+}
+
+section p{
+    color: #C1C1C1;
+    letter-spacing: -0.18px;
+    margin-top: 5px; 
+}
+ 
+section ul{ 
+    display: flex;
+    gap: 16px;
+    margin-top:24px;
+    flex-wrap: wrap; 
+}
+
+section ul li img{
+    border-radius: 8px;
+}
+
+section .my-series ul li img,
+section .my-films ul li img 
+{ 
+    border: 1px solid #555555;  
+    border-radius: 8px; 
+    width: 100px;
+    height: 150px;
+}
+
+header div {
+    animation: fromTop .7s .2s backwards;
+ }
+
+ main section{
+    animation: fromBottom .7s backwards;
+ }
+
+
+ 
+main section:nth-child(1){
+    animation-delay: 0; 
+}
+main section:nth-child(2){
+    animation-delay: .4s;
+}
+
+main section:nth-child(3){
+    animation-delay: .8s;
+} 
+@keyframes fromTop {
+    from{
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fromBottom {
+    from{
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}   
+
+ 
+
+  
